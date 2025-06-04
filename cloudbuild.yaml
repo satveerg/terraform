@@ -1,3 +1,6 @@
+options:
+  logging: CLOUD_LOGGING_ONLY  # You can also set 'NONE' or 'GCS_ONLY'
+  logsBucket: gs://cloudbuildlogs-satveer
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'us-central1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/my-image', '.']
